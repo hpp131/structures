@@ -1,6 +1,9 @@
 package main
 
-import "container/list"
+import (
+	// "container/list"
+	"fmt"
+)
 
 
 type student struct {
@@ -10,12 +13,13 @@ type student struct {
 
 
 func main()  {
+	var a student
 	s := new(student)
 	if s == nil {
 		fmt.Println(s)
 		return
 	}
 	fmt.Println("is not nil")
-	list.New()
+	// list.New()
 }
 
