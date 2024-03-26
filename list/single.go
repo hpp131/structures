@@ -17,7 +17,6 @@ func NewList(value int) *List{
 
 func main()  {
 	fmt.Println("hello world")
-
 }
 
 // 初始化单向链表:先初始化链表中的各个节点，然后将各个节点连接起来
