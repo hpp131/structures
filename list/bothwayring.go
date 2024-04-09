@@ -1,6 +1,6 @@
 // 双向循环链表
 
-package main
+package list
 
 import "fmt"
 

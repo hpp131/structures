@@ -1,6 +1,6 @@
 // 单向链表
 
-package main
+package list
 
 import "fmt"
 

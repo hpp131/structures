@@ -1,4 +1,4 @@
-package main
+package list
 
 import "fmt"
 
@@ -87,7 +87,4 @@ func main() {
 		fmt.Println(blist.value)
 		blist = blist.pre
 	}
-
-	
-
 }
