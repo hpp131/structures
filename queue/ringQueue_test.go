@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestNewRingQueue(*testing.T) {
+func TestRingQueue(*testing.T) {
 	rq := queue.NewRingQueue(3)
 	rq.EnQueue(1)
 	rq.EnQueue(2)
