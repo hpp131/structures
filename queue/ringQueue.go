@@ -1,4 +1,5 @@
 package queue
+// 使用数组实现队列
 
 import (
 	"fmt"
@@ -39,6 +40,9 @@ func (r *RingQueue) EnQueue(elem int) {
 	}
 	if r.size < len(r.arr) {
 		// 实现循环的效果
+		/*
+			比较取巧的实现循环的效果：tail = (tail + 1) % len(r.arr)。这种方式可以代替if的使用，能减少代码量
+		*/
 		if r.tail+1 > len(r.arr)-1 {
 			r.arr[r.tail] = elem
 			r.tail = 0
@@ -60,6 +64,9 @@ func (r *RingQueue) DeQueue() (elem int) {
 		fmt.Println("queue is empty, dequeue failed")
 		return
 	}
+	/*
+		比较取巧的实现循环的效果：head= (head + 1) % len(r.arr)。这种方式可以代替if的使用，能减少代码量
+	*/
 	if r.head+1 > len(r.arr)-1 {
 		r.head = 0
 		elem = r.arr[r.head]
