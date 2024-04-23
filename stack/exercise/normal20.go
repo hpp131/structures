@@ -1,7 +1,10 @@
 package exercise
+
+import "fmt"
+
 // 使用一个栈实现解决
 
-func isValid(s string) bool {
+func isValida(s string) bool {
     // 使用slice实现stack结构
     var sli []rune
     // 暂存前一个字符
