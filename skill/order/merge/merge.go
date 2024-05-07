@@ -23,14 +23,11 @@ func merge(data []int, lo, mid, hi int)  {
 	subData2 := data[mid+1:hi+1]
 	// 额外申请辅助空间
 	tmp := make([]int, hi-lo+1)
-	fmt.Printf("tmp length is %d, subData1 length is %d, subData2 length is %d\n", len(tmp), len(subData1), len(subData2))
 	p1 := 0
 	p2 := 0
 	index := 0 
 
 	for p1<len(subData1) && p2<len(subData2) {
-		fmt.Printf("第 %d次进入loop\n", index)
-		fmt.Printf("index value is %v\n", index)
 		if subData1[p1] < subData2[p2] {
 			// tmp = append(tmp, subData1[p1])
 			tmp[index] = subData1[p1]
