@@ -1,4 +1,4 @@
-package main
+package quick
 
 import (
 	"fmt"
@@ -7,14 +7,14 @@ import (
 
 // example []int{12,34,43,85,57,90,46}
 
-func sort(data []int, lo, hi int)  {
+func Sort(data []int, lo, hi int)  {
 	if lo >= hi {
 		return
 	}
 	// pivot := data[hi]
 	p_index := partation(data, lo, hi)
-	sort(data, lo, p_index-1)
-	sort(data, p_index+1, hi)
+	Sort(data, lo, p_index-1)
+	Sort(data, p_index+1, hi)
 }
 
 
@@ -37,6 +37,6 @@ func partation(data []int, lo, hi int) int {
 func main()  {
 	quickS := []int{12,34,43,85,57,91,47}
 	fmt.Printf("lenth is %d\n", len(quickS))
-	sort(quickS, 0, len(quickS)-1)
+	Sort(quickS, 0, len(quickS)-1)
 	fmt.Println(quickS)
 }

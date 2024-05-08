@@ -5,7 +5,7 @@ import "fmt"
 // []int{12,34,43,85,57,90,46}
 // 该算法对原生的冒泡进行了优化，即添加了hasSwitched变量来记录某轮比较中是否发生了值交换，如果没有发生值交换，则说明排序已经完成，可以提前结束排序。
 
-func bubbleSort(list []int) []int {
+func bubbleSort1(list []int) []int {
 	n := len(list)
 	if n <= 1 {
 		return list
@@ -30,5 +30,5 @@ func bubbleSort(list []int) []int {
 
 func main()  {
 	s := []int{12,34,43,85,57,90,46}
-	fmt.Println(bubbleSort(s))
+	fmt.Println(bubbleSort1(s))
 }
