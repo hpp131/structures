@@ -35,6 +35,7 @@ func countSort(data []int)  {
 	tmpSlice := make([]int, len(data))
 
 	// 4. recover data's stability
+	// inverted order iterate to guarantee stability of result
 	for j:=len(data)-1;j>=0;j-- {
 		index := data[j]
 		tmpSlice[prefixSlice[index]-1] = data[j]
@@ -42,7 +43,6 @@ func countSort(data []int)  {
 	}
 	// 
 	copy(data, tmpSlice)
-
 
 }
 
