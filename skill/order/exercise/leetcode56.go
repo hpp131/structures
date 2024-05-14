@@ -19,10 +19,9 @@ func min(a, b int) int {
 	return b
 }
 
-// intervals = [[1,3],[2,6],[8,10],[15,18]]
+// 对每个区间的start元素升序排列
 func merge(intervals [][]int) [][]int {
 	sort.Slice(intervals, func(i, j int) bool {
-		// 对每个区间的start元素升序排列
 		return intervals[i][0] < intervals[j][0]
 	})
 	tmpSlice := make([][]int, 0, len(intervals))
@@ -66,6 +65,8 @@ func main() {
 }
 
 /*
+在解题的时候并没有用到具体的某一种排序算法（如插入、快速、基数排序等，而是直接使用了Go语言内置sort包中的Slice方法，这个方法内部封装了各种排序算法。）
+因此，这个题目不仅仅是一道考察排序的题目，更需要体会如下两种解题方式中所包含的思想：
 
 按照start元素进行升序：
 	使用sort.Slice进行排序后，每个区间的start元素都是有序（升序）的，此时第一个区间的start一定是整个interval数组中的最小元素，那我们只需要在
