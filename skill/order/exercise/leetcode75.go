@@ -41,8 +41,7 @@ func colorSort2(nums []int)  {
 			}
 			p0++
 			p1++
-		}
-		if nums[i] == 1 {
+		} else if nums[i] == 1 {
 			nums[i], nums[p1] = nums[p1], nums[i]
 			p1++
 		}
