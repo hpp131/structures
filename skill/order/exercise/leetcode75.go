@@ -33,7 +33,7 @@ func colorSort1(nums []int)  {
 // Solution2
 func colorSort2(nums []int)  {
 	var p0, p1 = 0, 0
-	for i:=1;i<len(nums);i++ {
+	for i:=0;i<len(nums);i++ {
 		if nums[i] == 0 {
 			nums[i], nums[p0] = nums[p0], nums[i]
 			if p0 < p1 {
@@ -49,8 +49,13 @@ func colorSort2(nums []int)  {
 	}	
 }
 
+
+
+
+
+
 func main()  {
-	nums := []int{1,2,1,2,0,0,1}
+	nums := []int{1,0}
 	// colorSort1(nums)
 	colorSort2(nums)
 	fmt.Println(nums)
