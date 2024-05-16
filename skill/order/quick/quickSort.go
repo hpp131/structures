@@ -15,6 +15,7 @@ func Sort(data []int, lo, hi int)  {
 	p_index := partation(data, lo, hi)
 	Sort(data, lo, p_index-1)
 	Sort(data, p_index+1, hi)
+	len(data)
 }
 
 
