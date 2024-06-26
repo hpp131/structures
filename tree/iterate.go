@@ -5,7 +5,7 @@ import (
 )
 
 /*
-迭代法遍历二叉树
+	普通迭代法前中后序遍历二叉树，这种方式下，前后序遍历的代码写法与中序遍历的代码写法有很大不一样，并非一个模子。
 */
 
 type TreeNode struct {
@@ -111,6 +111,7 @@ func test(root *TreeNode) []int {
 	}
 	// 用Go内置的双向链表来模拟栈
 	st := list.New()
+	// st.Back()
 	st.PushBack(root)
 
 	for st.Len() > 0 {

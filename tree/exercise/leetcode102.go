@@ -23,6 +23,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 递归法
 func levelOrder(root *TreeNode) [][]int {
 	res := [][]int{}
 	depth := 0
@@ -45,3 +46,5 @@ func levelOrder(root *TreeNode) [][]int {
 	levelFunc(root, depth)
 	return res
 }
+
+// 迭代法
