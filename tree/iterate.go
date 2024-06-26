@@ -65,9 +65,6 @@ func inorderTraversal(root *TreeNode) []int {
 	return res
 }
 
-
-
-
 // 后续遍历
 func postorderTraversal(root *TreeNode) []int {
 	// 用于存放遍历结果的数组
@@ -106,12 +103,34 @@ func reverse(data []int) {
 	}
 }
 
+func test(root *TreeNode) []int {
+	ans := []int{}
 
-// 层序遍历
+	if root == nil {
+		return ans
+	}
+	// 用Go内置的双向链表来模拟栈
+	st := list.New()
+	st.PushBack(root)
+
+	for st.Len() > 0 {
+		node := st.Remove(st.Back()).(*TreeNode)
+		if node.Right != nil {
+			st.PushBack(node.Right)
+		}
+		if node.Left != nil {
+			st.PushBack(node.Left)
+		}
+
+	}
+	return nil
+}
+
+// 层序遍历，就是所谓的"广度优先遍历"
 
 func layerIterate(root *TreeNode) []int {
 	res := make([]int, 0)
-	
+
 	currentLevel := []*TreeNode{root}
 	for len(currentLevel) > 0 {
 		nextLevel := []*TreeNode{}

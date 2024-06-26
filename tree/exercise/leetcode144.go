@@ -9,7 +9,7 @@ type TreeNode struct {
 /* 题目描述
 题目描述很直接，就是让用前序遍历的方式遍历一个二叉树，没有多余的套路，不需要转换题义什么的
 */
-
+ 
 // 递归解法
 func preorderTraversal(root *TreeNode) []int {
 	res := make([]int, 0)
