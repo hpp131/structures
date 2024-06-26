@@ -15,6 +15,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 递归法
 func rightSideView(root *TreeNode) []int {
 	iterate := [][]int{}
 	res := []int{}

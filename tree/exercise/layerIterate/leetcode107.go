@@ -12,6 +12,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 递归法
 func levelOrderBottom(root *TreeNode) [][]int {
 	res := [][]int{}
 	depth := 0
@@ -33,7 +34,7 @@ func levelOrderBottom(root *TreeNode) [][]int {
 	}
 	levelFunc(root, depth)
 
-	// 对res数组的对称元素进行对换，i<len(res)/2写法适用于基数元素数组和偶数元素数组
+	// 对res数组的对称元素进行对换，i<len(res)/2写法适用于奇数元素数组和偶数元素数组
 	for i := 0; i < len(res)/2; i++ {
 		res[i], res[len(res)-i-1] = res[len(res)-i-1], res[i]
 	}
