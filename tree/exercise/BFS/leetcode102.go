@@ -1,5 +1,7 @@
 package main
 
+import "container/list"
+
 // 层序遍历
 
 // 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
@@ -48,3 +50,20 @@ func levelOrder(root *TreeNode) [][]int {
 }
 
 // 迭代法
+func levelOrder(root *TreeNode) [][]int {
+	res := make([][]int, 0)
+	if root == nil {
+		return res
+	}
+	// 用链表模拟队列
+	queue := list.New()
+	queue.PushBack(root)
+	for queue.Len() > 0 {
+		tmp := make([]int, 0)
+		qnode := queue.Back()
+		
+
+	}
+	return res
+
+}
