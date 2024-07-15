@@ -54,7 +54,7 @@ func invertTree(root *TreeNode) *TreeNode {
 }
 
 // 迭代前序遍历
-func invertTree(root *TreeNode) *TreeNode {
+func invertTree1(root *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}
